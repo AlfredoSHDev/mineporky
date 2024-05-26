@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/assets/img/logomp.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/mp.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -12,57 +12,88 @@
     <link rel="stylesheet" href="/assets/css/hma.css">
     <title>MinePorky | Home</title>
     <style>
-        body{
-            background-color:   rgb(247, 0, 255); /* Color rosado */
+        @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+        body {
+            font-family: "Onest", sans-serif; /* Usar la fuente importada en toda la web */
         }
-        /* Estilo para la primera zona */
+
         .zone1 {
-            background-color:   rgb(247, 0, 255); /* Color rosado */
-            color: black; /* Texto en negro */
-            text-align: center; /* Centrar texto */
-            padding: 100px 0; /* Espaciado interior superior e inferior */
-            position: relative; /* Añadido */
-            z-index: 1; /* Añadido */
+            font-weight: 100; /* Negrita (extrabold) */
+            background: rgb(2,0,36);
+background: linear-gradient(3deg, rgba(2,0,36,1) 0%, rgba(134,112,11,1) 35%, rgba(255,209,0,1) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .h1{
+            margin-top: -50px;
+            margin-left: 50px;
+            font-size: 16px;
         }
 
         /* Estilo para las demás zonas */
         .zone2 {
-            background-color: black; /* Color negro */
-            color: white; /* Texto en blanco para resaltar */
-            text-align: center; /* Centrar texto */
-            padding: 100px 0; /* Espaciado interior superior e inferior */
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .z1con {
+            margin-top: 450px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
         }
 
         /* Hacer que las zonas abarquen toda la pantalla */
         .full-screen {
-            min-height: 100vh; /* Mínimo de 100% del viewport height */
-            position: relative; /* Añadido */
-            z-index: 0; /* Añadido */
+            min-height: 100vh;
+            position: relative;
+            z-index: 0;
         }
         
-        /* Añadido */
         .navbar {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             z-index: 2;
-        }footer i{
-            color: black;
+        }
+
+        footer i {
+            color: white;
             font-size: 25px;
+        }
+        footer a {
+            color: #ffd100;
+        }
+        footer p {
+            color: white;
+            font-size: small;
+        }
+        footer {
+            background-color: black;
+        }
+        footer section a {
+            color: white;
         }
     </style>
 </head>
 <body>
 
+
 <?php include("../mineporky.es/includes/navbar1.php") ?>
 
 <main>
     <div class="zone1 full-screen">
-        <h1>MINEPORKY NETWORK</h1>
-        <p>"MinePorky awaits you! Join the fun in our universe. <br> Build, explore, and compete on our network of servers. Don't wait any longer, <br>join us now and make history together!"</p>
+        <h1 style="font-weight: 700;" class="h1">Welcome to MinePorky website</h1> <!-- Aplicar negrita (extrabold) -->
+        <div class="z1con">
+            <a href="#cards" style="text-decoration: none; color: white;">Scroll down to view more <i class='bx bxs-arrow-to-bottom'></i></a>
+        </div>
     </div>
-
+<section id="cards"
     <!-- Cards Section -->
     <div class="zone2 full-screen">
         <div class="container">
@@ -94,44 +125,39 @@
             </div>
         </div>
     </div>
+    </section>
 </main>
 
 <!-- Footer -->
-<footer class="text-center bg-body-tertiary">
+<footer class="text-center">
   <!-- Grid container -->
   <div class="container pt-4">
     <!-- Section: Social media -->
     <section class="mb-4">
-      <a href="">
-      <i class='bx bxl-twitter' ></i>
-      </a>
 
-      <a href="">
-      <i class='bx bxl-discord-alt' ></i>
-      </a>
+    <!-- Seecion X -->
+      <a href=""><i class='bx bxl-twitter' ><br></i></a>
 
-      <a href="">
-      <i class='bx bxl-github' ></i>
-      </a>
+    <!-- Seecion Discord -->
+      <a href=""><i class='bx bxl-discord-alt' ></i></a>
+
+    <!-- Seecion GitHub -->
+      <a href=""><i class='bx bxl-github' ></i></a>
 
     </section>
     <!-- Section: Social media -->
   </div>
-  <!-- Grid container -->
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: black; color: white;">
-    © 2020 Copyright:
-    <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    MinePorky Network © 2024 Copyright <br>
+    <p>MinePorky Network is not affiliated in any way with Mojan AB. If you have any questions please <a href="">contact us</a></p>
   </div>
   <!-- Copyright -->
 </footer>
-
-<script>
-    // Initialization for ES Users
-import { Ripple, initMDB } from "mdb-ui-kit";
-
-initMDB({ Ripple });
-</script>
+<div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <script src="assets/js/loading.js"></script>
 </body>
 </html>

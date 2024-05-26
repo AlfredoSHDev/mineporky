@@ -1,0 +1,145 @@
+.sticky-top {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+}
+
+nav.sticky {
+    background-color: hsla(0, 0%, 0%, 0.411);
+    color: white;
+}
+
+nav {
+    font-size: 17px;
+    transition: none; /* Eliminate transition */
+    color: white;
+    background-color: rgba(38, 38, 38, .3);
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    height: 100px;
+    margin-left: 30px;
+    margin-right: 600px;
+}
+
+.dropdown-menu {
+    background-color: hsla(0, 0%, 0%, 0.411);
+}
+
+.dropdown-menu a {
+    color: white;
+}
+
+#sesion {
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    line-height: 35px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 18px;
+}
+
+#sesion:hover {
+    background-color: lightgray;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    color: white;
+    font-size: 24px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white; /* Ensure list items are white */
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+        text-align: center; /* Center align elements */
+        color: white;
+    }
+    nav img{
+        height: 60px;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        margin: auto; /* Center the items */
+    }
+
+    #sesion {
+        margin-left: 0;
+        margin-top: 7px;
+        width: 100%;
+    }
+
+    /* Close the menu after clicking an item */
+    .navbar-nav .nav-item .nav-link {
+        cursor: pointer;
+    }
+}
+
+/* styles.css */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loader {
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.8); /* Mismo color de fondo que el wrapper */
+    border-radius: 50%;
+    animation: blur 2s ease-out forwards;
+  }
+  
+  @keyframes blur {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+/* styles.css */
+.content {
+    opacity: 0; /* Comienza con opacidad 0 para que esté oculto */
+    transition: opacity 0.5s ease; /* Agrega una transición suave de opacidad */
+  }
+  
+  /* Estilo adicional para asegurarse de que el contenido esté centrado verticalmente */
+  .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+      

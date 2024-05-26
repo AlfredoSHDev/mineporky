@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Onest", sans-serif;
+    color: white;
+    background-color: #222; /* Añadí un color de fondo al body para que se vea mejor */
+}
+
+.cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+form {
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto; /* Añadí márgenes automáticos a los lados para centrar el formulario */
+    position: relative;
+    color: white;
+    align-items: center;
+}
+
+form a {
+    color: #ffd100;
+}
+
+form h1 {
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="submit"],
+button {
+    margin-top: 15px;
+    padding: 10px 20px; 
+    border-radius: 25px; /* Cambié el valor de border-radius para redondear el botón */
+    background-color: #ffd100;
+    color: white;
+    cursor: pointer;
+    border: none;
+    width: 120px;
+}
+
+button:hover {
+    background-color: #b39800;
+}
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%; /* Hace que el formulario ocupe el 90% del ancho de la pantalla */
+    }
+    
+    input[type="submit"],
+    button {
+        width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+    }
+}
